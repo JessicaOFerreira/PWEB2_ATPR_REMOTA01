@@ -12,23 +12,26 @@ h1{
     text-align: center;
 }
 
-img{
-    position: relative;
-    width: 20px; height: 20px; margin-left: 165px;
+#menu{
+    position: absolute; 
+    left: 1140px;;
+    width: 40px; height: 40px;
 }
 
 .address{
-    width: 51%; height: 40px;
+    position: relative;
+    left: 240px;
+    width: 430px; height: 40px;
 }
 
-label img{
-    position: absolute;
-   
-    width: 45px; height: 40px;
+#imgdomain{
+    position: absolute;  
+    left: 390px;
+    width: 40px; height: 35px;
     background-color: rgb(230, 222, 222);
 }
 
-input[type=checkbox]{
+.menu{
 	display:none;
 }
 
@@ -59,6 +62,8 @@ input[type=checkbox]{
 }
 
 .submit_button{
+    position: relative;
+    left: 240px;
     width: 45px; height: 40px;
 }
 
