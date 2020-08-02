@@ -1,25 +1,23 @@
 //-----------------------------------------------------------
 //Itens Gerais
 let irBtn = document.querySelector(".submit_button");
-let menu = document.querySelector(".menu");
+let menu = document.querySelector("#menu");
 let address = document.querySelector(".address");
-let iframe = document.querySelector("responsive-iframe");
+let iframe = document.querySelector(".responsive-iframe");
 let closeBtn = document.querySelector(".close_button");
 let tools = document.querySelector("#tools");
 let browser = document.querySelector("#browser");
 //--------------------------------------------------
 
-console.log(irBtn);
-
 irBtn.addEventListener("click", function (e) {
     e.preventDefault(e);
-
+    
     if (address.value == "" || address.value == " ") {
         
         alert("Campo de Endereco Obrigatorio!");
     
     }
-    //n funciona isso aqui home
+
     else{
         iframe.src= address.value;
     }
@@ -35,14 +33,19 @@ closeBtn.addEventListener("click", function(){
 
     browser.append(newWindow);
 
+    iframe.src = "about:blank";
+
     newWindow.addEventListener("click", function(){
         browser.removeChild(newWindow);
         tools.style.display="block";
     });
 });
 
+//botao de menu funciona apenas com um alert simples. N consegui demontrar as informações solicitadas
+console.log(iframe.document.location.href);
+
 menu.addEventListener("click", function(){
-    let url= document.iframe.location.url;
-    alert("UL do Endereço: "+ url);
-    console.log(url)
+
+    alert("Informacoes da Pagina de Endereco:\n " 
+    + "URL: " + iframe.document.location.href);
 });
