@@ -42,10 +42,10 @@ closeBtn.addEventListener("click", function(){
 });
 
 //botao de menu funciona apenas com um alert simples. N consegui demontrar as informações solicitadas
-console.log(iframe.document.location.href);
+let url = document.iframe.location.href;
 
 menu.addEventListener("click", function(){
 
     alert("Informacoes da Pagina de Endereco:\n " 
-    + "URL: " + iframe.document.location.href);
+    + "URL: " + url);
 });
