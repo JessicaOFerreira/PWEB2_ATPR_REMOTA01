@@ -46,3 +46,10 @@ closeBtn.addEventListener("click", function(){
     });
 });
 
+
+//Menu não funciona
+menu.addEventListener("click", function(){
+    alert("Informacoes Gerais da Pagina: \n" + "URL: "+ iframe.href)
+});
+
+
