@@ -48,7 +48,8 @@ closeBtn.addEventListener("click", function(){
 
     newWindow.addEventListener("click", function(){
         browser.removeChild(newWindow);
-        tools.style.display="block";
+        tools.style.display="block";  
+        iframe = open("./readme/readme.html", "frameTab")
     });
 });
 
