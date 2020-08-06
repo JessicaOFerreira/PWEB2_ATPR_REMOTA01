@@ -3,7 +3,7 @@
 let irBtn = document.querySelector(".submit_button");
 let menu = document.querySelector("#menu");
 let address = document.querySelector(".address");
-let iframe = document.querySelector(".responsive-iframe");
+let iframe;
 let closeBtn = document.querySelector(".close_button");
 let tools = document.querySelector("#tools");
 let browser = document.querySelector("#browser");
@@ -19,10 +19,13 @@ irBtn.addEventListener("click", function (e) {
     }
 
     else{
-        iframe.src= address.value;
+        
+        let value = address.value;
+        iframe = open(value, "frameTab");
     }
     
 }); 
+
 
 closeBtn.addEventListener("click", function(){
     tools.style.display="none";
@@ -33,7 +36,9 @@ closeBtn.addEventListener("click", function(){
 
     browser.append(newWindow);
 
-    iframe.src = "about:blank";
+    iframe = open("about:blank", "frameTab");
+
+    address.value = "";
 
     newWindow.addEventListener("click", function(){
         browser.removeChild(newWindow);
@@ -41,11 +46,3 @@ closeBtn.addEventListener("click", function(){
     });
 });
 
-//botao de menu funciona apenas com um alert simples. N consegui demontrar as informações solicitadas
-let url = document.iframe.location.href;
-
-menu.addEventListener("click", function(){
-
-    alert("Informacoes da Pagina de Endereco:\n " 
-    + "URL: " + url);
-});
