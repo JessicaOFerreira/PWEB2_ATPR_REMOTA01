@@ -13,21 +13,24 @@ h1{
 }
 
 #menu{
-    position: absolute; 
-    left: 1140px;;
+    position: relative; 
+    left: 415px; top:5px;
     width: 40px; height: 40px;
 }
 
 .address{
     position: relative;
-    left: 240px;
+    left:205px; top: -11px;
     width: 430px; height: 40px;
 }
 
+#tools{
+    height: 50px;
+}
 #imgdomain{
-    position: absolute;  
-    left: 390px;
-    width: 40px; height: 35px;
+    position: relative;  
+    left: 200px; top: 2px;
+    width: 35px; height: 30px;
     background-color: rgb(230, 222, 222);
 }
 
@@ -57,13 +60,15 @@ h1{
     height: 15px;
     position:relative;
     margin-left: 10px;
+    top:-9px;
     background-color: brown;
     border-radius: 50%;
 }
 
 .submit_button{
     position: relative;
-    left: 240px;
+    left: 210px;
+    top:-11px;
     width: 45px; height: 40px;
 }
 
@@ -72,3 +77,4 @@ h1{
     font-size: large;
     border-color: springgreen;
 }
+
