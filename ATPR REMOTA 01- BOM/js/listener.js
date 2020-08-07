@@ -6,26 +6,23 @@ let address = document.querySelector(".address");
 let closeBtn = document.querySelector(".close_button");
 let tools = document.querySelector("#tools");
 let browser = document.querySelector("#browser");
-
+let iframe = document.querySelector(".responsive-iframe")
 //--------------------------------------------------
 
 irBtn.addEventListener("click", function (e) {
-    e.preventDefault(e);
-
-    if (address.value == "" || address.value == " ") {
-
-        alert("Campo de Endereco Obrigatorio!");
-
-    }
-
+    
     let value = address.value;
-    let iframe = open(value, "frameTab");
-
-    menu.addEventListener("click", function () {
-        alert("Informacoes Gerais da Pagina: \n" + "URL: " + iframe.href);
-    });
-
+    let menuFrame = open(value, "frameTab");
 });
+
+menu.addEventListener("click", function () {
+    alert("Informacoes Gerais da Pagina: \n" + "URL: " + menuFrame.location.href +
+    "\nProtocolo: "+ menuFrame.location.protocol +
+    "\nPorta: "+ menuFrame.location.port +
+    "\nLargura X Comprimento: " + menuFrame.innerWidth + " X "+ menuFrame.innerHeight +
+    "\nSistema Operacional: "+ menuFrame.navigator.plataform);
+});
+
 
 
 closeBtn.addEventListener("click", function () {
