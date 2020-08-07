@@ -7,12 +7,13 @@ let closeBtn = document.querySelector(".close_button");
 let tools = document.querySelector("#tools");
 let browser = document.querySelector("#browser");
 let iframe = document.querySelector(".responsive-iframe")
+let menuFrame;
 //--------------------------------------------------
 
 irBtn.addEventListener("click", function (e) {
     
     let value = address.value;
-    let menuFrame = open(value, "frameTab");
+    menuFrame = open(value, "frameTab");
 });
 
 menu.addEventListener("click", function () {
@@ -20,7 +21,7 @@ menu.addEventListener("click", function () {
     "\nProtocolo: "+ menuFrame.location.protocol +
     "\nPorta: "+ menuFrame.location.port +
     "\nLargura X Comprimento: " + menuFrame.innerWidth + " X "+ menuFrame.innerHeight +
-    "\nSistema Operacional: "+ menuFrame.navigator.plataform);
+    "\nSistema Operacional: "+ menuFrame.navigator.platform);
 });
 
 
